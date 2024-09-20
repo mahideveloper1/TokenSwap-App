@@ -59,8 +59,25 @@ const NavBar = () => {
         </div>
 
         {/* RIGHT SECTION */}
-        <div className={Style.NavBar_box_right}>right</div>
+        <div className={Style.NavBar_box_right}>
+          <div className={Style.NavBar_box_right_box}>
+            <div className={Style.NavBar_box_right_box_img}>
+              <Image src={images.ether} height={30} width={30} />
+            </div>
+            <p>Network</p>
+          </div>
+          <button onClick={() => {}}>Address</button>
+
+          {openModel && (
+            <Model setOpenModel={setOpenModel} connectWallet="Connect" />
+          )}
+        </div>
       </div>
+
+      {/* TOKENLIST COMPONENT */}
+      {openTokenBox && (
+        <TokenList tokenDate="hey" setOpenTokenBox={setOpenTokenBox} />
+      )}
     </div>
   );
 };
