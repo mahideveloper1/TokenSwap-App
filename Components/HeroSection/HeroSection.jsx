@@ -65,6 +65,22 @@ const HeroSection = (accounts, tokenData) => {
           <button className={Style.HeroSection_box_btn}>Swap</button>
         )}
       </div>
+
+      {openSetting && <Token openSetting={openSetting} />}
+      {openToken && (
+        <SearchToken
+          openToken={setOpenToken}
+          tokens={setTokenOne}
+          tokenData={tokenData}
+        />
+      )}
+      {openToken && (
+        <SearchToken
+          openToken={setOpenTokensTwo}
+          tokens={setTokenTwo}
+          tokenData={tokenData}
+        />
+      )}
     </div>
   );
 };
