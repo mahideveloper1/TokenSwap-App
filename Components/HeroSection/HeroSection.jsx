@@ -66,7 +66,7 @@ const HeroSection = (accounts, tokenData) => {
         )}
       </div>
 
-      {openSetting && <Token openSetting={openSetting} />}
+      {openSetting && <Token openSetting={setOpenSetting} />}
       {openToken && (
         <SearchToken
           openToken={setOpenToken}
