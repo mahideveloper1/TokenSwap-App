@@ -1,25 +1,50 @@
-require("@nomicfoundation/hardhat-toolbox");
+// require("@nomicfoundation/hardhat-toolbox");
+require("@nomiclabs/hardhat-waffle");
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: {
     compilers: [
       {
-        version: "0.8.24",
-      },
-      {
-        version: "0.7.6", // Supports contracts that need Solidity >=0.7.0 <0.8.0
-      },
-      {
-        version: "0.6.12", // Supports contracts that need Solidity >=0.6.0 <0.7.0
+        version: "0.7.6",
+        settings: {
+          evmVersion: "istanbul",
+          optimizer: {
+            enabled: true,
+            runs: 1000,
+          },
+        },
       },
     ],
   },
   networks: {
     hardhat: {
       forking: {
-        url: "https://eth-mainnet.g.alchemy.com/v2/FegBpCqlt9TGAFJP8Xkl6SF2bxY4Xadt",
+        url: "https://rpc.ankr.com/eth",
       },
     },
   },
 };
+
+// require("@nomiclabs/hardhat-waffle");
+
+// module.exports = {
+//   solidity: {
+//     version: "0.7.6",
+//     settings: {
+//       optimizer: {
+//         enabled: true,
+//         runs: 5000,
+//         details: { yul: false },
+//       },
+//     },
+//   },
+//   networks: {
+//     hardhat: {
+//       forking: {
+//         url: "your",
+//         accounts: [`0x${"your"}`],
+//       },
+//     },
+//   },
+// };

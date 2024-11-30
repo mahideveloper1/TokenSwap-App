@@ -1,7 +1,9 @@
 import React, { useState, useContext, useEffect } from "react";
+
+//INTERNAL IMPORT
 import { HeroSection } from "../Components/index";
 
-const index = () => {
+const Home = () => {
   return (
     <div>
       <HeroSection accounts="hey" tokenData="DATA" />
@@ -9,4 +11,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Home;

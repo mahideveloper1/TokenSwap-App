@@ -1,6 +1,7 @@
 import React from "react";
-import Style from "./Toggle.module.css";
 
+//INTERNAL IMPORT
+import Style from "./Toggle.module.css";
 const Toggle = ({ label }) => {
   return (
     <div className={Style.Toggle}>
@@ -11,7 +12,6 @@ const Toggle = ({ label }) => {
           name={label}
           id={label}
         />
-
         <label className={Style.Toggle_label} htmlFor={label}>
           <span className={Style.Toggle_inner} />
           <span className={Style.Toggle_switch} />
